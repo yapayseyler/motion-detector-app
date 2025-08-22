@@ -24,36 +24,21 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       
-    - name: Fix classpath and environment
+    - name: Install Gradle directly
       run: |
-        export JAVA_HOME=$JAVA_HOME
-        export CLASSPATH=""
-        export GRADLE_USER_HOME=$HOME/.gradle
-        echo "JAVA_HOME=$JAVA_HOME" >> $GITHUB_ENV
-        echo "CLASSPATH=" >> $GITHUB_ENV
-        echo "GRADLE_USER_HOME=$HOME/.gradle" >> $GITHUB_ENV
+        wget https://services.gradle.org/distributions/gradle-8.2-bin.zip
+        unzip -q gradle-8.2-bin.zip
+        export PATH=$PATH:$PWD/gradle-8.2/bin
+        echo "$PWD/gradle-8.2/bin" >> $GITHUB_PATH
         
-    - name: Make gradlew executable
-      run: |
-        chmod +x android_motion_detector/gradlew
-        ls -la android_motion_detector/gradlew
-        
-    - name: Clear any conflicting classpath
+    - name: Build APK with system Gradle
       working-directory: android_motion_detector
       run: |
-        unset CLASSPATH
-        export CLASSPATH=""
-        
-    - name: Build with Gradle (explicit settings)
-      working-directory: android_motion_detector
-      env:
-        CLASSPATH: ""
-        GRADLE_OPTS: "-Dorg.gradle.daemon=false"
-      run: |
-        ./gradlew clean assembleDebug \
+        gradle clean assembleDebug \
           --no-daemon \
           --stacktrace \
-          --info
+          --project-dir . \
+          --gradle-user-home /tmp/gradle-home
       
     - name: Upload APK
       uses: actions/upload-artifact@v4
