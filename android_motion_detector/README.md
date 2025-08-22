@@ -2,7 +2,7 @@
 
 ## 🎯 Genel Bakış
 
-Bu uygulama, OpenCV kullanarak gerçek zamanlı hareket algılama yapabilen kapsamlı bir Android uygulamasıdır. Kullanıcı tarafından ayarlanabilir hassasiyetle hareket algılar, sesli uyarı verir, bildirim gönderir ve ekran görüntüsü alır.
+Bu uygulama, OpenCV kullanarak gerçek zamanlı hareket algılama yapabilen kapsamlı bir Android uygulamasıdır. Kullanıcı tarafından ayarlanabilir hassasiyetle hareket algılar, sesli uyarı verir, bildirim gönderir ve ekran görüntüsü alır. 
 
 ## ✨ Ana Özellikler
 
