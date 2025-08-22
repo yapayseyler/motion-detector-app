@@ -24,7 +24,11 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       
+    - name: Change to Android project directory
+      run: cd android_motion_detector
+      
     - name: Grant execute permission for gradlew
+      working-directory: ./android_motion_detector
       run: |
         if [ ! -f "gradlew" ]; then
           echo "gradlew not found, creating wrapper..."
@@ -33,6 +37,7 @@ jobs:
         chmod +x gradlew
         
     - name: Create gradle wrapper if missing
+      working-directory: ./android_motion_detector
       run: |
         if [ ! -f "gradle/wrapper/gradle-wrapper.jar" ]; then
           echo "Creating Gradle wrapper..."
@@ -41,6 +46,7 @@ jobs:
         fi
         
     - name: Build APK
+      working-directory: ./android_motion_detector
       run: |
         ./gradlew clean
         ./gradlew assembleDebug --stacktrace --info
@@ -50,4 +56,14 @@ jobs:
       if: success()
       with:
         name: motion-detector-apk
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: android_motion_detector/app/build/outputs/apk/debug/app-debug.apk
+        
+    - name: Create Release
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v${{ github.run_number }}
+        name: Motion Detector v${{ github.run_number }}
+        files: android_motion_detector/app/build/outputs/apk/debug/app-debug.apk
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
