@@ -10,26 +10,39 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-
+      
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
-
+        
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
-
+      
+    - name: Clear all caches
+      run: |
+        rm -rf ~/.gradle/
+        rm -rf /tmp/.gradle*
+        
     - name: Make gradlew executable
-      run: chmod +x ./android_motion_detector/gradlew
-
-    - name: Build APK
-      run: ./android_motion_detector/gradlew assembleDebug
-
+      working-directory: android_motion_detector
+      run: chmod +x gradlew
+        
+    - name: Initialize Gradle properly
+      working-directory: android_motion_detector
+      run: |
+        ./gradlew --version
+        ./gradlew tasks --all
+        
+    - name: Build APK with explicit settings
+      working-directory: android_motion_detector
+      run: ./gradlew assembleDebug --settings-file settings.gradle --no-daemon
+      
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
