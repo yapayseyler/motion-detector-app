@@ -24,11 +24,36 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       
+    - name: Fix classpath and environment
+      run: |
+        export JAVA_HOME=$JAVA_HOME
+        export CLASSPATH=""
+        export GRADLE_USER_HOME=$HOME/.gradle
+        echo "JAVA_HOME=$JAVA_HOME" >> $GITHUB_ENV
+        echo "CLASSPATH=" >> $GITHUB_ENV
+        echo "GRADLE_USER_HOME=$HOME/.gradle" >> $GITHUB_ENV
+        
     - name: Make gradlew executable
-      run: chmod +x android_motion_detector/gradlew
-      
-    - name: Build with Gradle
-      run: android_motion_detector/gradlew assembleDebug
+      run: |
+        chmod +x android_motion_detector/gradlew
+        ls -la android_motion_detector/gradlew
+        
+    - name: Clear any conflicting classpath
+      working-directory: android_motion_detector
+      run: |
+        unset CLASSPATH
+        export CLASSPATH=""
+        
+    - name: Build with Gradle (explicit settings)
+      working-directory: android_motion_detector
+      env:
+        CLASSPATH: ""
+        GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+      run: |
+        ./gradlew clean assembleDebug \
+          --no-daemon \
+          --stacktrace \
+          --info
       
     - name: Upload APK
       uses: actions/upload-artifact@v4
