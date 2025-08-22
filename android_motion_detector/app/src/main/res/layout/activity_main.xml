@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="@string/app_name"
+            app:title="Motion Detector"
             app:titleTextColor="@android:color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -33,13 +33,12 @@
             android:padding="16dp">
 
             <!-- Camera Preview -->
-            <androidx.camera.view.PreviewView
+            <View
                 android:id="@+id/previewView"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_marginBottom="16dp"
-                android:background="@color/black"
-                app:scaleType="fillCenter" />
+                android:background="@android:color/black" />
 
             <!-- Status Card -->
             <com.google.android.material.card.MaterialCardView
@@ -60,7 +59,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/status_ready"
+                        android:text="Ready"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -70,7 +69,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:gravity="center"
-                        android:text="@string/no_detection_yet"
+                        android:text="No detection yet"
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -96,7 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/sensitivity_label"
+                        android:text="Sensitivity"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -118,7 +117,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/sensitivity_low"
+                            android:text="Low"
                             android:textSize="12sp" />
 
                         <TextView
@@ -126,7 +125,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="@string/sensitivity_medium"
+                            android:text="Medium"
                             android:textSize="12sp" />
 
                         <TextView
@@ -134,7 +133,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:text="@string/sensitivity_high"
+                            android:text="High"
                             android:textSize="12sp" />
 
                     </LinearLayout>
@@ -156,10 +155,9 @@
                     android:layout_height="60dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:text="@string/start_detection"
+                    android:text="Start Detection"
                     android:textSize="16sp"
-                    app:cornerRadius="8dp"
-                    app:icon="@drawable/ic_play_arrow" />
+                    app:cornerRadius="8dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/screenshotButton"
@@ -167,10 +165,9 @@
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="@string/take_screenshot"
+                    android:text="Screenshot"
                     android:textSize="16sp"
                     app:cornerRadius="8dp"
-                    app:icon="@drawable/ic_camera"
                     style="@style/Widget.Material3.Button.OutlinedButton" />
 
             </LinearLayout>
