@@ -5,7 +5,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  workflow_dispatch:  # Bu satırı ekleyin - manuel başlatma için
+  workflow_dispatch:
 
 jobs:
   build:
@@ -24,24 +24,30 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       
-    - name: Make gradlew executable
-      run: chmod +x ./gradlew
-      
+    - name: Grant execute permission for gradlew
+      run: |
+        if [ ! -f "gradlew" ]; then
+          echo "gradlew not found, creating wrapper..."
+          gradle wrapper
+        fi
+        chmod +x gradlew
+        
+    - name: Create gradle wrapper if missing
+      run: |
+        if [ ! -f "gradle/wrapper/gradle-wrapper.jar" ]; then
+          echo "Creating Gradle wrapper..."
+          mkdir -p gradle/wrapper
+          curl -L -o gradle/wrapper/gradle-wrapper.jar https://services.gradle.org/distributions/gradle-8.2-wrapper.jar
+        fi
+        
     - name: Build APK
-      run: ./gradlew assembleDebug
+      run: |
+        ./gradlew clean
+        ./gradlew assembleDebug --stacktrace --info
       
     - name: Upload APK
       uses: actions/upload-artifact@v4
+      if: success()
       with:
         name: motion-detector-apk
         path: app/build/outputs/apk/debug/app-debug.apk
-        
-    - name: Create Release
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-      uses: softprops/action-gh-release@v1
-      with:
-        tag_name: v${{ github.run_number }}
-        name: Motion Detector v${{ github.run_number }}
-        files: app/build/outputs/apk/debug/app-debug.apk
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
