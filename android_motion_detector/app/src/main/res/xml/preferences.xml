@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/pref_alerts_category">
+
+        <SwitchPreferenceCompat
+            android:key="sound_enabled"
+            android:title="@string/pref_sound_title"
+            android:summary="@string/pref_sound_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="notification_enabled"
+            android:title="@string/pref_notification_title"
+            android:summary="@string/pref_notification_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="vibration_enabled"
+            android:title="@string/pref_vibration_title"
+            android:summary="@string/pref_vibration_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_capture_category">
+
+        <SwitchPreferenceCompat
+            android:key="screen_capture_enabled"
+            android:title="@string/pref_screen_capture_title"
+            android:summary="@string/pref_screen_capture_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_advanced_category">
+
+        <SwitchPreferenceCompat
+            android:key="background_mode"
+            android:title="@string/pref_background_mode_title"
+            android:summary="@string/pref_background_mode_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

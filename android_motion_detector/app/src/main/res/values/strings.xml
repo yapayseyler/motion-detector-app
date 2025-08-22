@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Hareket Algılayıcı</string>
+    
+    <!-- Main Activity -->
+    <string name="status_ready">Hazır</string>
+    <string name="no_detection_yet">Henüz hareket algılanmadı</string>
+    <string name="sensitivity_label">Hassasiyet: %1$d%%</string>
+    <string name="sensitivity_low">Düşük</string>
+    <string name="sensitivity_medium">Orta</string>
+    <string name="sensitivity_high">Yüksek</string>
+    <string name="start_detection">Başlat</string>
+    <string name="stop_detection">Durdur</string>
+    <string name="take_screenshot">Ekran Görüntüsü</string>
+    
+    <!-- Menu -->
+    <string name="action_settings">Ayarlar</string>
+    <string name="action_history">Geçmiş</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">Ayarlar</string>
+    <string name="motion_history_title">Hareket Geçmişi</string>
+    
+    <!-- Preferences -->
+    <string name="pref_alerts_category">Uyarı Ayarları</string>
+    <string name="pref_sound_title">Sesli Uyarı</string>
+    <string name="pref_sound_summary">Hareket algılandığında ses çal</string>
+    <string name="pref_notification_title">Bildirim</string>
+    <string name="pref_notification_summary">Hareket algılandığında bildirim gönder</string>
+    <string name="pref_vibration_title">Titreşim</string>
+    <string name="pref_vibration_summary">Hareket algılandığında cihazı titret</string>
+    
+    <string name="pref_capture_category">Yakalama Ayarları</string>
+    <string name="pref_screen_capture_title">Ekran Görüntüsü</string>
+    <string name="pref_screen_capture_summary">Hareket algılandığında ekran görüntüsü al</string>
+    
+    <string name="pref_advanced_category">Gelişmiş Ayarlar</string>
+    <string name="pref_background_mode_title">Arka Plan Modu</string>
+    <string name="pref_background_mode_summary">Uygulama arka planda çalışabilir</string>
+    
+    <!-- Notifications -->
+    <string name="notification_motion_detected_title">⚠️ Hareket Algılandı!</string>
+    <string name="notification_motion_detected_text">%1$s\'da hareket tespit edildi</string>
+    <string name="notification_service_title">Hareket Algılama Aktif</string>
+    <string name="notification_service_text">Arka planda hareket izleniyor...</string>
+    
+    <!-- Error Messages -->
+    <string name="error_camera_permission">Kamera izni gerekli</string>
+    <string name="error_storage_permission">Depolama izni gerekli</string>
+    <string name="error_notification_permission">Bildirim izni gerekli</string>
+    <string name="error_camera_failed">Kamera başlatılamadı</string>
+    <string name="error_opencv_load">OpenCV yüklenemedi</string>
+    
+    <!-- Toast Messages -->
+    <string name="motion_detected">Hareket algılandı!</string>
+    <string name="screenshot_saved">Ekran görüntüsü kaydedildi</string>
+    <string name="permissions_required">Gerekli izinler verilmedi</string>
+</resources>

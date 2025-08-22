@@ -1,0 +1,230 @@
+{
+  "_source_id": 31,
+  "sources": {
+    "Android Bildirim Sistemi ve İzin Yönetimi": {
+      "https://developer.android.com/develop/ui/views/notifications/notification-permission": {
+        "id": 1,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/develop/ui/views/notifications/notification-permission",
+        "title": "Android 13+ POST_NOTIFICATIONS İzni",
+        "info": "Android 13+ bildirim izni gereksinimleri, implementasyon detayları ve best practices"
+      },
+      "https://developer.android.com/training/data-storage/manage-all-files": {
+        "id": 2,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/training/data-storage/manage-all-files",
+        "title": "Android 11+ MANAGE_EXTERNAL_STORAGE İzni",
+        "info": "Tüm dosyalara erişim izni, kısıtlamalar ve kullanım senaryoları"
+      },
+      "https://developer.android.com/develop/ui/views/notifications/build-notification": {
+        "id": 3,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/develop/ui/views/notifications/build-notification",
+        "title": "NotificationCompat Kılavuzu",
+        "info": "Bildirim oluşturma, kanallar, büyük metin/resim bildirimleri ve interaktif özellikler"
+      },
+      "https://developer.android.com/training/permissions/requesting": {
+        "id": 4,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/training/permissions/requesting",
+        "title": "Runtime Permissions Kılavuzu",
+        "info": "Çalışma zamanı izinleri, izin isteme workflow'u ve onay kontrolü"
+      },
+      "https://developer.android.com/media/platform/mediaplayer": {
+        "id": 5,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/media/platform/mediaplayer",
+        "title": "MediaPlayer API",
+        "info": "MediaPlayer kullanımı, ses çalma implementasyonu ve Media3 önerileri"
+      },
+      "https://developer.android.com/media/optimize/audio-focus": {
+        "id": 6,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/media/optimize/audio-focus",
+        "title": "Audio Focus Yönetimi",
+        "info": "Ses odağı yönetimi, AudioManager, requestAudioFocus ve abandonAudioFocus kullanımı"
+      },
+      "https://developer.android.com/about/versions/11/privacy/storage": {
+        "id": 7,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/about/versions/11/privacy/storage",
+        "title": "Android 11 Depolama Güncellemeleri",
+        "info": "Scoped storage, READ_EXTERNAL_STORAGE ve WRITE_EXTERNAL_STORAGE izin değişiklikleri"
+      },
+      "https://developer.android.com/training/permissions/explaining-access": {
+        "id": 8,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/training/permissions/explaining-access",
+        "title": "RECORD_AUDIO İzni",
+        "info": "Mikrofon izni, hassas bilgi erişimi ve Android 12+ gizlilik özellikleri"
+      },
+      "https://medium.com/androiddevelopers/deep-dive-mediaplayer-best-practices-feb4d15a66f5": {
+        "id": 9,
+        "publisher": "Android Developers Medium",
+        "url": "https://medium.com/androiddevelopers/deep-dive-mediaplayer-best-practices-feb4d15a66f5",
+        "title": "MediaPlayer Best Practices",
+        "info": "MediaPlayer lifecycle yönetimi, error handling ve optimize kullanım teknikleri"
+      }
+    },
+    "Android MediaProjection API Araştırması": {
+      "https://developer.android.com/media/grow/media-projection": {
+        "id": 10,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/media/grow/media-projection",
+        "title": "Media projection - Android Developers",
+        "info": "MediaProjection API'nin resmi dokümantasyonu, VirtualDisplay kullanımı, Android 14 uygulama ekranı paylaşımı özellikleri ve API referansları"
+      },
+      "https://developer.android.com/about/versions/14/behavior-changes-14": {
+        "id": 11,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/about/versions/14/behavior-changes-14",
+        "title": "Android 14 Davranış Değişiklikleri",
+        "info": "Android 14'te MediaProjection API için yeni izin gereksinimleri, foreground service türleri ve kullanıcı onayı mecburiyeti"
+      },
+      "https://android-developers.googleblog.com/2024/03/enhanced-screen-sharing-capabilities-in-android-14.html": {
+        "id": 12,
+        "publisher": "Android Developers Blog",
+        "url": "https://android-developers.googleblog.com/2024/03/enhanced-screen-sharing-capabilities-in-android-14.html",
+        "title": "Android 14'te Gelişmiş Ekran Paylaşım Özellikleri",
+        "info": "Android 14 QPR2 ile gelen uygulama ekranı paylaşımı, MediaProjection API güncellemeleri ve yeni callback metodları"
+      },
+      "https://stackoverflow.com/questions/26545970/take-a-screenshot-using-mediaprojection": {
+        "id": 13,
+        "publisher": "Stack Overflow",
+        "url": "https://stackoverflow.com/questions/26545970/take-a-screenshot-using-mediaprojection",
+        "title": "MediaProjection ile Ekran Görüntüsü Alma",
+        "info": "ImageReader ve OpenGL ES kullanarak MediaProjection ile ekran yakalama teknikleri, kod örnekleri ve yaygın sorunların çözümleri"
+      },
+      "https://stackoverflow.com/questions/77307867/screen-capture-mediaprojection-on-android-14": {
+        "id": 14,
+        "publisher": "Stack Overflow",
+        "url": "https://stackoverflow.com/questions/77307867/screen-capture-mediaprojection-on-android-14",
+        "title": "Android 14'te MediaProjection Sorunları",
+        "info": "Android 14'te foreground service izin gereksinimleri, SecurityException hataları ve çözüm yöntemleri"
+      },
+      "https://medium.com/bolt-labs/how-to-programmatically-capture-screen-on-android-a-comprehensive-guide-f500c95e455a": {
+        "id": 15,
+        "publisher": "Bolt Labs",
+        "url": "https://medium.com/bolt-labs/how-to-programmatically-capture-screen-on-android-a-comprehensive-guide-f500c95e455a",
+        "title": "Android'de Programatik Ekran Yakalama Rehberi",
+        "info": "Farklı ekran yakalama teknikleri, MediaProjection, PixelCopy ve VirtualDisplay kullanımı hakkında kapsamlı rehber"
+      },
+      "https://gist.github.com/nosix/fcf1923f0c7cc42aa8c2ee70ff457b9c": {
+        "id": 16,
+        "publisher": "GitHub",
+        "url": "https://gist.github.com/nosix/fcf1923f0c7cc42aa8c2ee70ff457b9c",
+        "title": "Kotlin ile Ekran Görüntüsü Alma Örneği",
+        "info": "Android SDK 21+ için Kotlin ile MediaProjection kullanarak ekran görüntüsü alma kod örneği"
+      }
+    },
+    "OpenCV Android SDK 2025 Analizi": {
+      "https://opencv.org/blog/opencv-4-10-0/": {
+        "id": 17,
+        "publisher": "OpenCV Foundation",
+        "url": "https://opencv.org/blog/opencv-4-10-0/",
+        "title": "OpenCV 4.10.0 Release Notes",
+        "info": "OpenCV 4.10.0'ın yeni özellikleri, Android SDK desteği, ARM performans iyileştirmeleri ve KleidiCV HAL kütüphanesi bilgileri"
+      },
+      "https://docs.opencv.org/4.x/d9/d3f/tutorial_android_dev_intro.html": {
+        "id": 18,
+        "publisher": "OpenCV Foundation",
+        "url": "https://docs.opencv.org/4.x/d9/d3f/tutorial_android_dev_intro.html",
+        "title": "Android Development Introduction Tutorial",
+        "info": "OpenCV Android geliştirme ortamı kurulumu, SDK/NDK gereksinimleri ve örnek proje konfigürasyonu"
+      },
+      "https://docs.opencv.org/4.x/d1/dc5/tutorial_background_subtraction.html": {
+        "id": 19,
+        "publisher": "OpenCV Foundation",
+        "url": "https://docs.opencv.org/4.x/d1/dc5/tutorial_background_subtraction.html",
+        "title": "Background Subtraction Tutorial",
+        "info": "MOG2 ve KNN background subtraction algoritmalarının kullanımı ve C++ implementasyon örnekleri"
+      },
+      "https://rosan-international.com/motion_detection_android/": {
+        "id": 20,
+        "publisher": "Rosan International",
+        "url": "https://rosan-international.com/motion_detection_android/",
+        "title": "Frame Differencing Motion Detection Algorithm for Android",
+        "info": "Android'de frame differencing algoritması implementasyonu, Kotlin kod örnekleri ve performans optimizasyon teknikleri"
+      },
+      "https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html": {
+        "id": 21,
+        "publisher": "OpenCV Foundation",
+        "url": "https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html",
+        "title": "Changing Colorspaces Tutorial",
+        "info": "HSV renk uzayı kullanımı, cv.cvtColor() ve cv.inRange() fonksiyonları ile renk tespiti implementasyonu"
+      },
+      "https://docs.opencv.org/4.x/d5/df8/tutorial_dev_with_OCV_on_Android.html": {
+        "id": 22,
+        "publisher": "OpenCV Foundation",
+        "url": "https://docs.opencv.org/4.x/d5/df8/tutorial_dev_with_OCV_on_Android.html",
+        "title": "Android Development with OpenCV",
+        "info": "OpenCV Android Studio kurulumu, Gradle konfigürasyonu, Maven Central dependency kullanımı ve build.gradle ayarları"
+      },
+      "https://sisik.eu/blog/android/ndk/opencv-without-java": {
+        "id": 23,
+        "publisher": "Sisik EU",
+        "url": "https://sisik.eu/blog/android/ndk/opencv-without-java",
+        "title": "Compiling and Using OpenCV on Android from C++",
+        "info": "Native C++ OpenCV kullanımı, CMakeLists.txt konfigürasyonu, cross-compilation ve linking işlemleri"
+      }
+    },
+    "CameraX API Implementation Guide": {
+      "https://developer.android.com/media/camera/camerax": {
+        "id": 24,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/media/camera/camerax",
+        "title": "CameraX Overview - Official Documentation",
+        "info": "CameraX'in temel faydaları, geniş cihaz uyumluluğu, kullanım kolaylığı ve mevcut Android cihazlarının %98'inden fazlasında çalışma yeteneği"
+      },
+      "https://developer.android.com/codelabs/camerax-getting-started": {
+        "id": 25,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/codelabs/camerax-getting-started",
+        "title": "Getting Started with CameraX Codelab",
+        "info": "Preview, ImageCapture, ImageAnalysis ve VideoCapture use case'lerinin detaylı Kotlin implementasyonu ve adım adım rehber"
+      },
+      "https://developer.android.com/media/camera/camerax/architecture": {
+        "id": 26,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/media/camera/camerax/architecture",
+        "title": "CameraX Architecture Documentation",
+        "info": "CameraX mimarisi, use case'ler, lifecycle yönetimi, API modeli ve eş zamanlı kullanım durumları hakkında teknik detaylar"
+      },
+      "https://android-developers.googleblog.com/2024/12/whats-new-in-camerax-140-and-jetpack-compose-support.html": {
+        "id": 27,
+        "publisher": "Android Developers Blog",
+        "url": "https://android-developers.googleblog.com/2024/12/whats-new-in-camerax-140-and-jetpack-compose-support.html",
+        "title": "What's new in CameraX 1.4.0",
+        "info": "CameraX 1.4.0'ın yeni özellikleri: HDR genişletmeleri, önizleme stabilizasyonu, effect framework, Ultra HDR desteği ve Jetpack Compose entegrasyonu"
+      },
+      "https://github.com/mcanyucel/camerax-opencv": {
+        "id": 28,
+        "publisher": "GitHub",
+        "url": "https://github.com/mcanyucel/camerax-opencv",
+        "title": "CameraX OpenCV Integration Sample",
+        "info": "CameraX ve OpenCV entegrasyonu için kapsamlı örnek proje: ImageAnalysis ile real-time görüntü işleme, YUV-RGB dönüşümü ve ImageProxy kullanımı"
+      },
+      "https://developer.android.com/media/camera/camerax/analyze": {
+        "id": 29,
+        "publisher": "Android Developers",
+        "url": "https://developer.android.com/media/camera/camerax/analyze",
+        "title": "Image Analysis with CameraX",
+        "info": "ImageAnalysis use case'inin detaylı kullanımı, geri basınç stratejileri, çıkış formatları ve performans optimizasyonları"
+      },
+      "https://proandroiddev.com/android-camerax-preview-analyze-capture-1b3f403a9395": {
+        "id": 30,
+        "publisher": "ProAndroidDev",
+        "url": "https://proandroiddev.com/android-camerax-preview-analyze-capture-1b3f403a9395",
+        "title": "Android CameraX: Preview, Analyze, Capture",
+        "info": "CameraX'in üç ana use case'inin pratik kullanımı, yapılandırma seçenekleri ve implementasyon detayları"
+      },
+      "https://medium.com/androiddevelopers/core-principles-behind-camerax-jetpack-library-8e8380f7604c": {
+        "id": 31,
+        "publisher": "Android Developers Medium",
+        "url": "https://medium.com/androiddevelopers/core-principles-behind-camerax-jetpack-library-8e8380f7604c",
+        "title": "Core Principles Behind CameraX",
+        "info": "CameraX'in lifecycle awareness özelliği, use-case-driven yaklaşım ve best practices konularında temel prensipler"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "Android hareket algılama uygulaması için gerekli teknolojilerin araştırılması",
+        "details": "OpenCV Android SDK, CameraX, MediaProjection API, bildirim sistemi ve gerekli izinlerin detaylı araştırılması. En güncel implementasyon yöntemlerinin belirlenmesi.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "Android uygulama projesinin oluşturulması ve temel yapının kurulması",
+        "details": "Kotlin ile Empty Activity projesi oluşturma, AndroidManifest.xml konfigürasyonu, gerekli dependency'lerin eklenmesi, proje yapısının hazırlanması.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "Kamera ve OpenCV entegrasyonunun implementasyonu",
+        "details": "CameraX ile kamera önizlemesi kurulması, OpenCV entegrasyonu, frame processing ve hareket algılama algoritmasının geliştirilmesi.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "4": {
+        "id": "4",
+        "content": "Kullanıcı arayüzü ve hassasiyet kontrolünün geliştirilmesi",
+        "details": "SeekBar ile hassasiyet ayarı, ana kullanıcı arayüzü, layout dosyaları ve user experience optimizasyonu.",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "5": {
+        "id": "5",
+        "content": "Uyarı sistemlerinin implementasyonu",
+        "details": "Sesli uyarı çalma (MediaPlayer), Android bildirim sistemi (NotificationCompat), ekran görüntüsü alma (MediaProjection) ve dosya kaydetme işlevlerinin geliştirilmesi.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "6": {
+        "id": "6",
+        "content": "İzin yönetimi ve güvenlik implementasyonu",
+        "details": "CAMERA, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE, POST_NOTIFICATIONS izinlerinin runtime olarak istenmesi ve yönetilmesi.",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "7": {
+        "id": "7",
+        "content": "Opsiyonel arka plan servisi ve hareket logları sistemi",
+        "details": "Foreground Service implementasyonu, Room database ile hareket logları kaydetme, geçmiş kayıtları görüntüleme özelliği.",
+        "status": "completed",
+        "priority": "low"
+      },
+      "8": {
+        "id": "8",
+        "content": "Test ve optimizasyon",
+        "details": "Farklı ışık koşullarında, farklı renklerde ve çeşitli Android cihazlarda test edilmesi, performans optimizasyonu.",
+        "status": "completed",
+        "priority": "medium"
+      }
+    }
+  }
+}
