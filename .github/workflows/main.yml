@@ -24,24 +24,37 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       
-    - name: Clear all caches
+    - name: Nuclear cleanup
       run: |
         rm -rf ~/.gradle/
         rm -rf /tmp/.gradle*
+        rm -rf $HOME/.gradle/
+        find . -name "*.gradle*" -type f -delete 2>/dev/null || true
+        find . -name ".gradle" -type d -exec rm -rf {} + 2>/dev/null || true
+        
+    - name: List project structure
+      working-directory: android_motion_detector
+      run: |
+        echo "=== Project files ==="
+        ls -la
+        echo "=== Settings content ==="
+        cat settings.gradle
+        echo "=== Build content ==="
+        head -10 build.gradle
         
     - name: Make gradlew executable
       working-directory: android_motion_detector
       run: chmod +x gradlew
         
-    - name: Initialize Gradle properly
+    - name: Build with explicit paths
       working-directory: android_motion_detector
       run: |
-        ./gradlew --version
-        ./gradlew tasks --all
-        
-    - name: Build APK with explicit settings
-      working-directory: android_motion_detector
-      run: ./gradlew assembleDebug --settings-file settings.gradle --no-daemon
+        export GRADLE_USER_HOME=/tmp/gradle-home
+        ./gradlew assembleDebug \
+          --project-dir . \
+          --gradle-user-home /tmp/gradle-home \
+          --no-daemon \
+          --stacktrace
       
     - name: Upload APK
       uses: actions/upload-artifact@v4
